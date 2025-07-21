@@ -1,78 +1,30 @@
 import React, { useState } from 'react';
 import Section from '../components/Section';
 import PortfolioCard from '../components/PortfolioCard';
-const portfolioItems = [{
-  title: 'The Sweet Science of Molasses',
+const portfolioItems = [ {
+  title: 'Fusion Treats You Can Make With Grocery Store Staples',
   publication: 'Flavor & Fire Digital',
-  description: 'Deep dive into the chemistry, history, and culinary applications of this Southern staple, from barbecue sauces to traditional baking.',
-  imageUrl: 'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Deep Research', 'Ingredient Profile', 'Chemistry'],
-  category: 'Ingredient Spotlight'
-}, {
-  title: 'Goat Curry and Gulf Coast Memory',
-  publication: 'Flavor & Fire Digital',
-  description: 'Exploring the cultural intersections of Caribbean and Southern Gulf cooking traditions through the lens of a family recipe.',
+  description: 'You don’t expect pineapple upside-down cake to start with frozen bao. Or churros to come out of a waffle iron. But pair everyday grocery items with global flavors, and your pantry becomes a gateway to something unexpected.',
   imageUrl: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   articleUrl: '#',
   tags: ['Cultural History', 'Recipe Development', 'Gulf Coast'],
   category: 'Recipe Development'
 }, {
-  title: 'Fermentation Revolution: Beyond Kombucha',
+  title: 'Cast Iron Fixes That Take Less Time Than You’d Think',
   publication: 'Spoon & Spatula',
-  description: 'An examination of how home fermentation has evolved beyond trendy drinks into a serious culinary technique for the modern kitchen.',
+  description: 'Rust usually forms on cast iron skillets when water sits too long after washing. Even if the damage looks bad, light rust often rests on the surface and can be removed in under 10 minutes. Scrub the affected area with steel wool or a chainmail pad and warm water, no soap needed. Focus on the orange or reddish spots until bare metal reappears. Once clean, dry the pan immediately over medium heat to evaporate any remaining moisture.',
   imageUrl: 'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   articleUrl: '#',
   tags: ['Trend Analysis', 'Technique', 'Fermentation'],
   category: 'Technique'
 }, {
-  title: "Heirloom Beans: America's Forgotten Culinary Treasures",
+  title: 'Clifftop Kitchens: West Coast Spots With a Golden-Hour View',
   publication: 'The Pantry Journal',
-  description: 'Exploring the rich diversity, history, and culinary potential of heirloom bean varieties that have been cultivated for generations in the American South.',
-  imageUrl: 'https://images.unsplash.com/photo-1515543904379-3d757afe72e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Ingredient History', 'Southern Cooking', 'Sustainability'],
-  category: 'Ingredient Spotlight'
-}, {
-  title: 'Cast Iron Revival: The Science Behind the Seasoning',
-  publication: 'Grit & Garnish',
-  description: 'A technical exploration of the chemistry behind cast iron seasoning and why this traditional cooking method continues to outperform modern alternatives.',
-  imageUrl: 'https://images.unsplash.com/photo-1574181609812-4d5f9a5c6f64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Kitchen Science', 'Technique', 'Traditional Methods'],
-  category: 'Technique'
-}, {
-  title: 'Smoke & Memory: The Cultural Geography of Texas Barbecue',
-  publication: 'Flavor & Fire Digital',
-  description: 'Mapping the regional variations of Texas barbecue traditions and exploring how geography, migration, and cultural exchange have shaped distinctive styles.',
-  imageUrl: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Cultural History', 'Regional Cooking', 'Texas'],
-  category: 'Cultural History'
-}, {
-  title: 'The Rise of Gulf Coast Fusion Cuisine',
-  publication: 'Baytown Food Collective',
-  description: 'Documenting the emergence of innovative restaurants blending Vietnamese, Mexican, and Southern cooking traditions along the Texas Gulf Coast.',
-  imageUrl: 'https://images.unsplash.com/photo-1579631542720-3a87824fff86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Restaurant Trend', 'Gulf Coast', 'Fusion'],
-  category: 'Restaurant Trend'
-}, {
-  title: 'Sorghum: The Forgotten Southern Sweetener',
-  publication: 'The Pantry Journal',
-  description: 'Investigating the history, production methods, and culinary applications of sorghum syrup, once a staple sweetener in Southern kitchens.',
+  description: 'Along the Pacific coastline, a quiet trend is transforming dinner into an immersive event. A growing number of restaurants located on elevated coastal terrain are designing their entire experience around the golden hour, the period just before sunset when natural light adds warmth and depth. These clifftop kitchens treat sunlight not as background scenery, but as an essential element worth building the meal around.',
   imageUrl: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   articleUrl: '#',
   tags: ['Ingredient History', 'Southern Cooking', 'Traditional Methods'],
   category: 'Ingredient Spotlight'
-}, {
-  title: 'Small Batch: Craft Hot Sauce Makers of the American South',
-  publication: 'Spoon & Spatula',
-  description: 'Profiles of artisanal hot sauce producers preserving regional pepper varieties and traditional fermentation methods across the Southern states.',
-  imageUrl: 'https://images.unsplash.com/photo-1566022328196-5ffb69946bda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Artisan Producers', 'Fermentation', 'Regional Products'],
-  category: 'Producer Profile'
 }];
 const PortfolioPage = () => {
   const [activeFilter, setActiveFilter] = useState('All');
