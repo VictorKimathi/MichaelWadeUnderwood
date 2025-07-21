@@ -3,27 +3,30 @@ import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import Button from '../components/Button';
 import PortfolioCard from '../components/PortfolioCard';
-const featuredPortfolio = [{
-  title: 'The Sweet Science of Molasses',
-  publication: 'Flavor & Fire Digital',
-  description: 'Deep dive into the chemistry, history, and culinary applications of this Southern staple, from barbecue sauces to traditional baking.',
-  imageUrl: 'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-  articleUrl: '#',
-  tags: ['Deep Research', 'Ingredient Profile']
-}, {
-  title: 'Goat Curry and Gulf Coast Memory',
-  publication: 'Flavor & Fire Digital',
-  description: 'Exploring the cultural intersections of Caribbean and Southern Gulf cooking traditions through the lens of a family recipe.',
+const featuredPortfolio =  [ {
+  title: 'Fusion Treats You Can Make With Grocery Store Staples',
+  description: 'You don’t expect pineapple upside-down cake to start with frozen bao. Or churros to come out of a waffle iron. But pair everyday grocery items with global flavors, and your pantry becomes a gateway to something unexpected.',
   imageUrl: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   articleUrl: '#',
-  tags: ['Cultural History', 'Recipe Development']
+  tags: ['Fusion desserts', 'Grocery store hacks', 'Creative baking'],
+  href: 'Fusion_Treats_You_Can_Make.pdf',
+  category: 'Easy Fusion Recipes'
 }, {
-  title: 'Fermentation Revolution: Beyond Kombucha',
-  publication: 'Spoon & Spatula',
-  description: 'An examination of how home fermentation has evolved beyond trendy drinks into a serious culinary technique for the modern kitchen.',
+  title: 'Cast Iron Fixes That Take Less Time Than You’d Think',
+  description: 'Rust usually forms on cast iron skillets when water sits too long after washing. Even if the damage looks bad, light rust often rests on the surface and can be removed in under 10 minutes. Scrub the affected area with steel wool or a chainmail pad and warm water, no soap needed. Focus on the orange or reddish spots until bare metal reappears. Once clean, dry the pan immediately over medium heat to evaporate any remaining moisture.',
   imageUrl: 'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   articleUrl: '#',
-  tags: ['Trend Analysis', 'Technique']
+  tags: ['Cast iron skillet', 'Seasoning techniques', 'Kitchen maintenance'],
+  href: 'Cast_Iron_Fixes.pdf',
+  category: 'Home & Kitchen Care'
+}, {
+  title: 'Clifftop Kitchens: West Coast Spots With a Golden-Hour View',
+  description: 'Along the Pacific coastline, a quiet trend is transforming dinner into an immersive event. A growing number of restaurants located on elevated coastal terrain are designing their entire experience around the golden hour, the period just before sunset when natural light adds warmth and depth. These clifftop kitchens treat sunlight not as background scenery, but as an essential element worth building the meal around.',
+  imageUrl: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+  articleUrl: '#',
+  tags: ['Sunset dining', 'Coastal restaurants', 'Culinary tourism'],
+  href: 'Clifftop_Kitchens',
+  category: 'Food & Travel Experiences'
 }];
 const HomePage = () => {
   return <>
